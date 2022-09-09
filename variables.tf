@@ -26,3 +26,15 @@ variable "aaa_gke_aaa-cidr" { type = string }
 variable "aaa_gke_aaa-type" { type = string }
 variable "aaa_gke_aaa-min_version" { type = string }
 variable "aaa_gke_aaa-init" { type = number }
+
+#############################################
+# GKE Pools
+#
+variable "aaa_gke_pool_aaa-preemptible" { type = string }
+variable "aaa_gke_pool_aaa-name" { type = string }
+variable "aaa_gke_pool_aaa-tags" { type = string }
+variable "aaa_gke_pool_aaa-cidr" { type = string }
+variable "aaa_gke_pool_aaa-type" { type = string }
+variable "aaa_gke_pool_aaa-init" { type = string }
+variable "aaa_gke_pool_aaa-min" { type = string }
+variable "aaa_gke_pool_aaa-max" { type = string }

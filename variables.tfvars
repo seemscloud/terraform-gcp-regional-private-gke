@@ -24,6 +24,18 @@ aaa_gke_aaa-preemptible = true
 aaa_gke_aaa-name        = "example"
 aaa_gke_aaa-tags        = ["gke", "all"]
 aaa_gke_aaa-cidr        = "10.0.10.0/24"
-aaa_gke_aaa-type        = "e2-standard-8"
+aaa_gke_aaa-type        = "e2-standard-2"
 aaa_gke_aaa-min_version = "1.21.5-gke.1302"
 aaa_gke_aaa-init        = 1
+
+#############################################
+# GKE Pools
+#
+aaa_gke_pool_aaa-preemptible = true
+aaa_gke_pool_aaa-name        = "mini-pool"
+aaa_gke_pool_aaa-tags        = ["gke", "mini-pool", "all"]
+aaa_gke_pool_aaa-cidr        = "10.0.11.0/24"
+aaa_gke_pool_aaa-type        = "e2-standard-2"
+aaa_gke_pool_aaa-init        = 3
+aaa_gke_pool_aaa-min         = 3
+aaa_gke_pool_aaa-max         = 3
