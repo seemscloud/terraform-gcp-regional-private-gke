@@ -1,0 +1,1 @@
+variable "aaa_network_aaa" { type = string }
