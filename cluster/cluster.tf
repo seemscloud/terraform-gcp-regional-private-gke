@@ -10,13 +10,13 @@ resource "google_container_cluster" "aaa_gke_aaa" {
   node_locations           = data.google_compute_zones.zones.names
   min_master_version       = var.cluster_min_version
   network                  = google_compute_network.network.id
-  subnetwork               = google_compute_subnetwork.subnetwork.id
+  subnetwork               = google_compute_subnetwork.cluster.id
   initial_node_count       = var.cluster_init
   remove_default_node_pool = false
 
   master_authorized_networks_config {
     cidr_blocks {
-      cidr_block = v
+      cidr_block = var.bastion_cidr
     }
   }
 
@@ -45,6 +45,11 @@ resource "google_container_cluster" "aaa_gke_aaa" {
     enabled = true
   }
 
+  ip_allocation_policy {
+    cluster_secondary_range_name  = var.cluster_cluster_cidr_name
+    services_secondary_range_name = var.cluster_service_cidr_name
+  }
+
   cluster_autoscaling {
     enabled = true
 
@@ -67,7 +72,8 @@ resource "google_container_cluster" "aaa_gke_aaa" {
 
   depends_on = [
     google_compute_network.network,
-    google_compute_subnetwork.subnetwork,
+    google_compute_subnetwork.cluster,
+    google_compute_subnetwork.bastion,
     google_service_account.aaa_gke_aaa
   ]
 }
