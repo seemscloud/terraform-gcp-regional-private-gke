@@ -21,17 +21,9 @@ aaa_network_aaa = "network"
 # GKE Clusters
 #
 aaa_gke_aaa-preemptible = true
-aaa_gke_aaa-name = "example"
-aaa_gke_aaa-tags = [
-  "gke",
-  "all"]
-aaa_gke_aaa-region = "europe-central2"
-aaa_gke_aaa-zones = [
-  "europe-central2-a",
-  "europe-central2-b",
-  "europe-central2-c",
-]
-aaa_gke_aaa-cidr = "10.0.10.0/24"
-aaa_gke_aaa-type = "e2-standard-8"
+aaa_gke_aaa-name        = "example"
+aaa_gke_aaa-tags        = ["gke", "all"]
+aaa_gke_aaa-cidr        = "10.0.10.0/24"
+aaa_gke_aaa-type        = "e2-standard-8"
 aaa_gke_aaa-min_version = "1.21.5-gke.1302"
-aaa_gke_aaa-init = 1
+aaa_gke_aaa-init        = 1

@@ -19,7 +19,10 @@ variable "aaa_network_aaa" { type = string }
 #############################################
 # GKE Clusters
 #
-
 variable "aaa_gke_aaa-preemptible" { type = string }
 variable "aaa_gke_aaa-name" { type = string }
-variable "aaa_gke_aaa-tags" {}
+variable "aaa_gke_aaa-tags" { type = string }
+variable "aaa_gke_aaa-cidr" { type = string }
+variable "aaa_gke_aaa-type" { type = string }
+variable "aaa_gke_aaa-min_version" { type = string }
+variable "aaa_gke_aaa-init" { type = number }
