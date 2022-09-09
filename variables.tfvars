@@ -15,4 +15,5 @@ EndOfMessage
 #############################################
 # VPC Networks
 #
-aaa_vpc_aaa = "network"
+aaa_network_aaa = "network"
+
