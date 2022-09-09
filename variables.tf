@@ -32,7 +32,7 @@ variable "aaa_gke_aaa-init" { type = number }
 #
 variable "aaa_gke_pool_aaa-preemptible" { type = string }
 variable "aaa_gke_pool_aaa-name" { type = string }
-variable "aaa_gke_pool_aaa-tags" { type = string }
+variable "aaa_gke_pool_aaa-tags" { type = list(string) }
 variable "aaa_gke_pool_aaa-cidr" { type = string }
 variable "aaa_gke_pool_aaa-type" { type = string }
 variable "aaa_gke_pool_aaa-init" { type = string }
