@@ -1,7 +1,7 @@
 #############################################
 # Project Details
 #
-variable "project_id" { type = string }
+variable "project" { type = string }
 variable "region" { type = string }
 variable "prefix" { type = string }
 
@@ -19,22 +19,22 @@ variable "aaa_network_aaa" { type = string }
 #############################################
 # GKE Clusters
 #
-variable "aaa_gke_aaa-preemptible" { type = string }
-variable "aaa_gke_aaa-name" { type = string }
-variable "aaa_gke_aaa-tags" { type = list(string) }
-variable "aaa_gke_aaa-cidr" { type = string }
-variable "aaa_gke_aaa-type" { type = string }
-variable "aaa_gke_aaa-min_version" { type = string }
-variable "aaa_gke_aaa-init" { type = number }
+variable "aaa_cluster_aaa-preemptible" { type = string }
+variable "aaa_cluster_aaa-name" { type = string }
+variable "aaa_cluster_aaa-tags" { type = list(string) }
+variable "aaa_cluster_aaa-cidr" { type = string }
+variable "aaa_cluster_aaa-type" { type = string }
+variable "aaa_cluster_aaa-min_version" { type = string }
+variable "aaa_cluster_aaa-init" { type = number }
 
 #############################################
 # GKE Pools
 #
-variable "aaa_gke_pool_aaa-preemptible" { type = string }
-variable "aaa_gke_pool_aaa-name" { type = string }
-variable "aaa_gke_pool_aaa-tags" { type = list(string) }
-variable "aaa_gke_pool_aaa-cidr" { type = string }
-variable "aaa_gke_pool_aaa-type" { type = string }
-variable "aaa_gke_pool_aaa-init" { type = string }
-variable "aaa_gke_pool_aaa-min" { type = string }
-variable "aaa_gke_pool_aaa-max" { type = string }
+variable "aaa_node_pool_aaa-preemptible" { type = string }
+variable "aaa_node_pool_aaa-name" { type = string }
+variable "aaa_node_pool_aaa-tags" { type = list(string) }
+variable "aaa_node_pool_aaa-cidr" { type = string }
+variable "aaa_node_pool_aaa-type" { type = string }
+variable "aaa_node_pool_aaa-init" { type = string }
+variable "aaa_node_pool_aaa-min" { type = string }
+variable "aaa_node_pool_aaa-max" { type = string }
