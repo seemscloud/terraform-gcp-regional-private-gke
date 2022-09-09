@@ -38,3 +38,12 @@ variable "aaa_node_pool_aaa-type" { type = string }
 variable "aaa_node_pool_aaa-init" { type = string }
 variable "aaa_node_pool_aaa-min" { type = string }
 variable "aaa_node_pool_aaa-max" { type = string }
+
+variable "aaa_node_pool_bbb-preemptible" { type = string }
+variable "aaa_node_pool_bbb-name" { type = string }
+variable "aaa_node_pool_bbb-tags" { type = list(string) }
+variable "aaa_node_pool_bbb-cidr" { type = string }
+variable "aaa_node_pool_bbb-type" { type = string }
+variable "aaa_node_pool_bbb-init" { type = string }
+variable "aaa_node_pool_bbb-min" { type = string }
+variable "aaa_node_pool_bbb-max" { type = string }

@@ -20,8 +20,8 @@ aaa_network_aaa = "network"
 # GKE Clusters
 #
 aaa_cluster_aaa-preemptible = true
-aaa_cluster_aaa-name        = "example"
-aaa_cluster_aaa-tags        = ["gke", "all"]
+aaa_cluster_aaa-name        = "foobar"
+aaa_cluster_aaa-tags        = ["cluster", "all"]
 aaa_cluster_aaa-cidr        = "10.0.10.0/24"
 aaa_cluster_aaa-type        = "e2-standard-2"
 aaa_cluster_aaa-min_version = "1.21.5-gke.1302"
@@ -30,10 +30,19 @@ aaa_cluster_aaa-init        = 1
 #############################################
 # GKE Pools
 #
+aaa_node_pool_bbb-preemptible = true
+aaa_node_pool_bbb-name        = "primary"
+aaa_node_pool_aaa-tags        = ["cluster", "primary-pool", "all"]
+aaa_node_pool_bbb-cidr        = "10.0.11.0/24"
+aaa_node_pool_bbb-type        = "e2-standard-2"
+aaa_node_pool_bbb-init        = 3
+aaa_node_pool_bbb-min         = 3
+aaa_node_pool_bbb-max         = 3
+
 aaa_node_pool_aaa-preemptible = true
-aaa_node_pool_aaa-name        = "mini-pool"
-aaa_node_pool_aaa-tags        = ["gke", "mini-pool", "all"]
-aaa_node_pool_aaa-cidr        = "10.0.11.0/24"
+aaa_node_pool_aaa-name        = "secondary"
+aaa_node_pool_aaa-tags        = ["cluster", "secondary-pool", "all"]
+aaa_node_pool_aaa-cidr        = "10.0.12.0/24"
 aaa_node_pool_aaa-type        = "e2-standard-2"
 aaa_node_pool_aaa-init        = 3
 aaa_node_pool_aaa-min         = 3
