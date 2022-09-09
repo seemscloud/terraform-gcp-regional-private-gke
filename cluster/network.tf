@@ -1,4 +1,4 @@
-resource "google_compute_network" "aaa_network_aaa" {
-  name                    = var.aaa_network_aaa
+resource "google_compute_network" "network" {
+  name                    = var.network
   auto_create_subnetworks = false
 }

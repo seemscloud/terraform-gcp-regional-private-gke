@@ -14,14 +14,14 @@ terraform_ssh_key_pub = "terraform:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDH7Gltx
 #############################################
 # GKE Clusters
 #
-aaa_cluster_aaa-network_name = "network"
-aaa_cluster_aaa-preemptible  = true
-aaa_cluster_aaa-name         = "urban"
-aaa_cluster_aaa-tags         = ["cluster", "all"]
-aaa_cluster_aaa-cidr         = "10.0.10.0/24"
-aaa_cluster_aaa-type         = "e2-standard-2"
-aaa_cluster_aaa-min_version  = "1.21.5-gke.1302"
-aaa_cluster_aaa-init         = 1
+aaa_cluster_aaa-network     = "network"
+aaa_cluster_aaa-preemptible = true
+aaa_cluster_aaa-name        = "seemscloud"
+aaa_cluster_aaa-tags        = ["cluster", "all"]
+aaa_cluster_aaa-cidr        = "10.0.10.0/24"
+aaa_cluster_aaa-type        = "e2-standard-2"
+aaa_cluster_aaa-min_version = "1.21.5-gke.1302"
+aaa_cluster_aaa-init        = 1
 
 #############################################
 # GKE Pools

@@ -1,5 +1,6 @@
 locals {
   random = "${var.prefix}${random_string.random.result}"
 
-  aaa_network_aaa = "${local.random}-${var.aaa_network_aaa}"
+  aaa_cluster_aaa-network = "${local.random}-${var.aaa_cluster_aaa-network}"
+  aaa_cluster_aaa-name    = "${local.random}-${var.aaa_cluster_aaa-name}"
 }
