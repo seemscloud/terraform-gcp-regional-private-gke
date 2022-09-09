@@ -14,11 +14,27 @@ variable "terraform_ssh_key_pub" { type = string }
 #############################################
 # GKE Clusters
 #
+variable "aaa_instance_aaa-name" { type = string }
+variable "aaa_instance_aaa-machine_type" { type = string }
+variable "aaa_instance_aaa-zone" { type = string }
+variable "aaa_instance_aaa-tags" { type = list(string) }
+variable "aaa_instance_aaa-address_type" { type = string }
+variable "aaa_instance_aaa-desired_status" { type = string }
+variable "aaa_instance_aaa-boot_image" { type = string }
+variable "aaa_instance_aaa-boot_disk_size" { type = number }
+variable "aaa_instance_aaa-boot_disk_type" { type = string }
+variable "aaa_instance_aaa-boot_disk_auto_delete" { type = bool }
+variable "aaa_instance_aaa-preemptible" { type = bool }
+variable "aaa_instance_aaa-automatic_restart" { type = bool }
+
 variable "aaa_cluster_aaa-network" { type = string }
 variable "aaa_cluster_aaa-preemptible" { type = string }
 variable "aaa_cluster_aaa-name" { type = string }
 variable "aaa_cluster_aaa-tags" { type = list(string) }
 variable "aaa_cluster_aaa-cidr" { type = string }
+variable "aaa_cluster_aaa-private_nodes" { type = bool }
+variable "aaa_cluster_aaa-private_endpoints" { type = bool }
+variable "aaa_cluster_aaa-master_cidr" { type = string }
 variable "aaa_cluster_aaa-type" { type = string }
 variable "aaa_cluster_aaa-min_version" { type = string }
 variable "aaa_cluster_aaa-init" { type = number }

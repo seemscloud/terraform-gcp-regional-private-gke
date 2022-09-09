@@ -14,14 +14,30 @@ terraform_ssh_key_pub = "terraform:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDH7Gltx
 #############################################
 # GKE Clusters
 #
-aaa_cluster_aaa-network     = "network"
-aaa_cluster_aaa-preemptible = true
-aaa_cluster_aaa-name        = "seemscloud"
-aaa_cluster_aaa-tags        = ["cluster", "all"]
-aaa_cluster_aaa-cidr        = "10.0.10.0/24"
-aaa_cluster_aaa-type        = "e2-standard-2"
-aaa_cluster_aaa-min_version = "1.21.5-gke.1302"
-aaa_cluster_aaa-init        = 1
+aaa_instance_aaa-name                  = "bastion"
+aaa_instance_aaa-machine_type          = "e2-highcpu-2"
+aaa_instance_aaa-zone                  = null
+aaa_instance_aaa-tags                  = ["bastion", "all"]
+aaa_instance_aaa-address_type          = "EXTERNAL"
+aaa_instance_aaa-desired_status        = "RUNNING"
+aaa_instance_aaa-boot_image            = "ubuntu-2004-lts"
+aaa_instance_aaa-boot_disk_size        = 32
+aaa_instance_aaa-boot_disk_type        = "pd-ssd"
+aaa_instance_aaa-boot_disk_auto_delete = false
+aaa_instance_aaa-preemptible           = false
+aaa_instance_aaa-automatic_restart     = false
+
+aaa_cluster_aaa-network           = "network"
+aaa_cluster_aaa-preemptible       = true
+aaa_cluster_aaa-name              = "seemscloud"
+aaa_cluster_aaa-tags              = ["cluster", "all"]
+aaa_cluster_aaa-cidr              = "10.0.10.0/24"
+aaa_cluster_aaa-private_nodes     = true
+aaa_cluster_aaa-private_endpoints = true
+aaa_cluster_aaa-master_cidr       = "10.0.10.240/28"
+aaa_cluster_aaa-type              = "e2-standard-2"
+aaa_cluster_aaa-min_version       = "1.22.11-gke.400"
+aaa_cluster_aaa-init              = 1
 
 #############################################
 # GKE Pools
