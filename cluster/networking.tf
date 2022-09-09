@@ -1,3 +1,8 @@
+resource "google_compute_network" "network" {
+  name                    = var.network
+  auto_create_subnetworks = false
+}
+
 resource "google_compute_subnetwork" "cluster" {
   name          = var.cluster_name
   ip_cidr_range = var.cluster_nodes_cidr

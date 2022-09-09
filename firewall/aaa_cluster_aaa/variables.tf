@@ -1,4 +1,4 @@
-variable "aaa_cluster_aaa" {
+variable "network" {
   type = object({
     name = string
   })

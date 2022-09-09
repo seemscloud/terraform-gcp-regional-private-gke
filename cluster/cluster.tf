@@ -1,13 +1,8 @@
-data "google_compute_zones" "zones" {
-  project = var.project
-  region  = var.region
-}
-
 resource "google_container_cluster" "aaa_gke_aaa" {
   name = var.cluster_name
 
   location                 = var.region
-  node_locations           = data.google_compute_zones.zones.names
+  node_locations           = data.google_compute_zones.available.names
   min_master_version       = var.cluster_min_version
   network                  = google_compute_network.network.id
   subnetwork               = google_compute_subnetwork.cluster.id
